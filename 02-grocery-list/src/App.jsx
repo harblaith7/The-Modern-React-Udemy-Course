@@ -1,7 +1,14 @@
 import "./App.css";
 import groceryCartImg from "./assets/grocery-cart.png";
+import { useState } from "react";
 
 function App() {
+  const [inputValue, setInputValue] = useState("");
+
+  const handleChangeInputValue = (e) => {
+    setInputValue(e.target.value);
+  };
+
   return (
     <main className="App">
       <div>
@@ -14,6 +21,8 @@ function App() {
               type="text"
               placeholder="Add an Item"
               className="item-input"
+              onChange={handleChangeInputValue}
+              value={inputValue}
             />
           </div>
         </div>
