@@ -3,6 +3,72 @@
   width: 100vw;
   display: flex;
   justify-content: center;
-  align-self: center;
-  background-color: aqua;
+  align-items: center;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(74, 28, 28, 0.25);
+}
+
+.item-input {
+  width: 300px;
+}
+
+img {
+  width: 150px;
+  margin: 20px 0
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(74, 28, 28, 0.25);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+li p {
+  text-transform: capitalize;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+li p span {
+  font-size: 8px;
+  font-weight: bold;
+}
+
+.remove-button {
+  color: rgb(230, 85, 85);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.success {
+  text-align: center;
+  color: rgb(100,180,100);
+  font-weight: 700;
+}
+
+ul {
+  margin: 0;
 }
