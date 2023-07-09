@@ -9,6 +9,8 @@ function App() {
     setInputValue(e.target.value);
   };
 
+  console.log(groceryItems);
+
   const handleAddGroceryItem = (e) => {
     if (e.key === "Enter") {
       if (inputValue) {
@@ -38,11 +40,24 @@ function App() {
     setGroceryItems([...groceryItems].filter((item) => item.name !== name));
   };
 
+  const handleUpdateCompleteStatus = (status, index) => {
+    const updatedGroceryList = [...groceryItems];
+    updatedGroceryList[index].completed = status;
+    setGroceryItems(updatedGroceryList);
+  };
+
   const renderGroceryList = () => {
-    return groceryItems.map((item) => (
+    return groceryItems.map((item, index) => (
       <li key={item.name}>
         <div className="container">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            onChange={(e) => {
+              handleUpdateCompleteStatus(e.target.checked, index);
+            }}
+            value={item.completed}
+            checked={item.completed}
+          />
           <p>
             {item.name} {item.quantity > 1 && <span>x{item.quantity}</span>}
           </p>
