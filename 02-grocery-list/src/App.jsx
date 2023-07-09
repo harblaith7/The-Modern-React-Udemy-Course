@@ -35,7 +35,7 @@ function App() {
 
   const renderGroceryList = () => {
     return groceryItems.map((item) => (
-      <li>
+      <li key={item.name}>
         <div className="container">
           <input type="checkbox" />
           <p>{item.name}</p>
