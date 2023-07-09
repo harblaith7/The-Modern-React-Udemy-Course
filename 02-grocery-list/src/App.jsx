@@ -2,18 +2,10 @@ import "./App.css";
 import groceryCartImg from "./assets/grocery-cart.png";
 import { useState } from "react";
 
-// {
-//   name: "Banana",
-//   quantity: 1,
-//   completed: true
-// }
-
 function App() {
   const [inputValue, setInputValue] = useState("");
   const [groceryItems, setGroceryItems] = useState([]);
-  console.log(groceryItems);
   const handleChangeInputValue = (e) => {
-    console.log("i was called");
     setInputValue(e.target.value);
   };
 
@@ -47,7 +39,9 @@ function App() {
       <li key={item.name}>
         <div className="container">
           <input type="checkbox" />
-          <p>{item.name}</p>
+          <p>
+            {item.name} {item.quantity > 1 && <span>x{item.quantity}</span>}
+          </p>
         </div>
         <div>
           <button className="remove-button">X</button>
