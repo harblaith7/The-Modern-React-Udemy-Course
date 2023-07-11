@@ -2,10 +2,11 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [statements, setStatements] = useState([]);
   const [input, setInput] = useState({
     statement: "",
     amount: "",
-    statementType: "",
+    statementType: "income",
   });
   const [showError, setShowError] = useState({
     statement: false,
@@ -20,7 +21,7 @@ function App() {
   };
 
   const handleAddNewStatement = () => {
-    const { statement, amount } = input;
+    const { statement, amount, statementType } = input;
 
     if (!statement) {
       return setShowError({
@@ -38,6 +39,20 @@ function App() {
         amount: false,
       });
       // ADD LOGIC TO ADD STATMENT
+      setStatements([
+        ...statements,
+        {
+          name: statement,
+          amount: parseFloat(amount).toFixed(2),
+          type: statementType,
+          date: new Date().toDateString(),
+        },
+      ]);
+      setInput({
+        statement: "",
+        amount: "",
+        statementType: "income",
+      });
     }
   };
 
@@ -77,13 +92,21 @@ function App() {
           <button onClick={handleAddNewStatement}>+</button>
         </div>
         <div>
-          <div className="card">
-            <div className="card-info">
-              <h4>Salary</h4>
-              <p>July 27th, 2024</p>
+          {statements.map(({ name, type, amount, date }) => (
+            <div className="card">
+              <div className="card-info">
+                <h4>{name}</h4>
+                <p>{date}</p>
+              </div>
+              <p
+                className={`amount-text ${
+                  type === "income" ? "success" : "danger"
+                }`}
+              >
+                {type === "income" ? "+" : "-"}${amount}
+              </p>
             </div>
-            <p className="amount-text success">+$5000</p>
-          </div>
+          ))}
         </div>
       </div>
     </main>
