@@ -1,0 +1,61 @@
+main {
+  max-width: 500px;
+  margin: 0 auto
+}
+
+.total-text {
+  font-size: 50px;
+  margin: 10px 0;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.32);
+  width: 100%;
+  margin-right: 10px;
+  padding: 5px 0;
+}
+
+button {
+  width: 100px;
+  margin-left: 10px;
+}
+
+.card {
+  box-shadow: 0.1px 1px 3px rgba(0,0,0,0.27);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-info h4 {
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.card-info p {
+  font-weight: 500;
+  font-size: 9px;
+  color: grey
+}
+
+.amount-text {
+  font-size: 12px;
+}
+
+.success {
+color: rgb(81,190,81)
+}
+
+.danger {
+  color: rgb(206,76,76)
+}
