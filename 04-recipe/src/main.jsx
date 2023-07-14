@@ -9,6 +9,7 @@ import {
 import App from "./App.jsx";
 import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
+import RecipePage from "./pages/RecipePage";
 import "./index.css";
 
 const router = createBrowserRouter(
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
+      <Route path="/recipe/:id" element={<RecipePage />} />
     </Route>
   )
 );
