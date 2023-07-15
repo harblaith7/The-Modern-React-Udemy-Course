@@ -276,3 +276,9 @@ nav a {
   font-weight: bold;
   margin-right: 15px;
 }
+
+.nutritional-facts-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
