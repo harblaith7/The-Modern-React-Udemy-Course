@@ -1,14 +1,16 @@
 import CardList from "../components/CardList";
 import Header from "../components/Header";
+import Loading from "../components/Loading";
 import useFetchRecipes from "../hooks/useFetchRecipes";
 
 export default function HomePage() {
-  const [recipes] = useFetchRecipes();
+  const [data, loading] = useFetchRecipes();
 
   return (
     <>
       <Header />
-      <CardList recipes={recipes} />
+      {loading && <Loading />}
+      {data && <CardList recipes={data} />}
     </>
   );
 }
