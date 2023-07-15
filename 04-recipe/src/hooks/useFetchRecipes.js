@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const options = {
   method: "GET",
@@ -19,16 +19,16 @@ const useFetchRecipes = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetchRecipes();
-  }, []);
-
-  const fetchRecipes = async () => {
+  const fetchRecipes = async (searchTerm) => {
     setLoading(true);
     setRecipes(null);
     setError(null);
     try {
-      const response = await axios.request(options);
+      const reqOptions = { ...options };
+      if (searchTerm) {
+        reqOptions.params.q = searchTerm;
+      }
+      const response = await axios.request(reqOptions);
       setRecipes(response.data.results);
       setLoading(false);
     } catch (err) {
@@ -37,7 +37,7 @@ const useFetchRecipes = () => {
     }
   };
 
-  return [recipes, loading, error];
+  return [fetchRecipes, { data: recipes, loading, error }];
 };
 
 export default useFetchRecipes;
