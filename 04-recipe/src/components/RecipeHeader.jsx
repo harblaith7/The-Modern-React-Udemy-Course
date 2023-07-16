@@ -4,7 +4,7 @@ import { CiWheat } from "react-icons/ci";
 import { BiCheese, BiCake } from "react-icons/bi";
 import { IoFishOutline } from "react-icons/io5";
 
-export default function RecipeHeader({ nutritionalFacts }) {
+export default function RecipeHeader({ nutritionalFacts, name }) {
   const nutritionalFactsArray = [
     {
       id: 1,
@@ -40,7 +40,7 @@ export default function RecipeHeader({ nutritionalFacts }) {
 
   return (
     <div className="recipe-header">
-      <h1>Chai-Spiced Cheesecake Muffins</h1>
+      <h1>{name}</h1>
       <div className="nutritional-facts-container">
         {nutritionalFactsArray.map(({ Icon, id, amount, category }) => (
           <RecipeNutritionalFact fact={{ amount, category }} key={id}>
