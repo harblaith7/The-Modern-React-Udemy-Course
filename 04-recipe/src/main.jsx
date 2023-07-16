@@ -11,10 +11,11 @@ import AboutPage from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
 import RecipePage from "./pages/RecipePage";
 import "./index.css";
+import ErrorPage from "./pages/ErrorPage.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>
+    <Route path="/" element={<App />} errorElement={<ErrorPage />}>
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route path="/recipe/:id" element={<RecipePage />} />

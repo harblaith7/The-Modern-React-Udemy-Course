@@ -1,10 +1,16 @@
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 
 function Header({ handleSearch }) {
   const [searchTerm, setSearchTerm] = useState("");
-
+  const [_, setSearchParams] = useSearchParams();
   const handleClick = () => {
     handleSearch(searchTerm);
+    if (searchTerm) {
+      setSearchParams({
+        search: searchTerm,
+      });
+    }
     setSearchTerm("");
   };
 

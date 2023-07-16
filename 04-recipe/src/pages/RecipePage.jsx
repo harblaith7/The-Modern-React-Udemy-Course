@@ -4,6 +4,7 @@ import RecipeHeader from "../components/RecipeHeader";
 import useFetchRecipe from "../hooks/useFetchRecipe";
 import Loading from "../components/Loading";
 import RecipeInfo from "../components/RecipeInfo";
+import Error from "../components/Error";
 // import { recipes } from "../components/CardList";
 
 export default function RecipePage() {
@@ -16,7 +17,7 @@ export default function RecipePage() {
 
   if (loading) return <Loading />;
   if (error) return <h1>{error}</h1>;
-
+  if (data?.errors) return <Error explanation="Recipe not found" />;
   return (
     <div>
       {data && (
