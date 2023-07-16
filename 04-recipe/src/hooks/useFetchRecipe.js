@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useReducer } from "react";
 
 const options = {
   method: "GET",
@@ -11,28 +11,64 @@ const options = {
   },
 };
 
+const initialState = {
+  data: null,
+  loading: false,
+  error: null,
+};
+
+const Action = {
+  FETCHING_DATA: "FETCHING_DATA",
+  FETCH_SUCCESSFUL: "FETCH_SUCCESSFUL",
+  FETCH_ERROR: "FETCH_ERROR",
+};
+
+const reducer = (_, action) => {
+  switch (action.type) {
+    case Action.FETCHING_DATA:
+      return {
+        data: null,
+        error: null,
+        loading: true,
+      };
+    case Action.FETCH_SUCCESSFUL:
+      return {
+        error: null,
+        loading: false,
+        data: action.payload,
+      };
+    case Action.FETCH_ERROR:
+      return {
+        error: action.payload,
+        data: null,
+        loading: false,
+      };
+    default:
+      return initialState;
+  }
+};
+
 const useFetchRecipe = () => {
-  const [recipe, setRecipe] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [{ data, loading, error }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
 
   const fetchRecipe = async (id) => {
-    setLoading(true);
-    setRecipe(null);
-    setError(null);
+    dispatch({ type: Action.FETCHING_DATA });
+
     try {
       const reqOptions = { ...options };
       reqOptions.params.id = id;
       const response = await axios.request(reqOptions);
-      setRecipe(response.data);
-      setLoading(false);
+
+      dispatch({ type: Action.FETCH_SUCCESSFUL, payload: response.data });
     } catch (err) {
-      setError(err.message);
-      setLoading(false);
+      dispatch({ type: Action.FETCH_ERROR, payload: err.message });
     }
   };
 
-  return [fetchRecipe, { data: recipe, loading, error }];
+  return [fetchRecipe, { data, loading, error }];
 };
 
 export default useFetchRecipe;
