@@ -18,6 +18,8 @@ export default function RecipePage() {
   if (loading) return <Loading />;
   if (error) return <h1>{error}</h1>;
   if (data?.errors) return <Error explanation="Recipe not found" />;
+
+  console.log(data);
   return (
     <div>
       {data && (
@@ -26,6 +28,7 @@ export default function RecipePage() {
           <RecipeInfo
             instructions={data.instructions}
             image={data.thumbnail_url}
+            ingredients={data.sections[0].components}
           />
         </>
       )}

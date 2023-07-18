@@ -6,7 +6,7 @@ export default function Card({ recipe }) {
   const navigate = useNavigate();
 
   const navigateToRecipePage = () => {
-    navigate(`/recipe/${id}`);
+    navigate(`/recipe/${id}/instructions`);
   };
 
   return (
