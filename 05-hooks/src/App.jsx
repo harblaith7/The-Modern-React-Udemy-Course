@@ -6,6 +6,7 @@ import MagicNumber from "./components/MagicNumber";
 import SignUpToNewsLetter from "./components/SignUpToNewsLetter";
 import MemoHook from "./components/MemoHook";
 import Parent from "./components/Memo/Parent";
+import List from "./components/Zoo/List";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <MagicNumber /> */}
       {/* <SignUpToNewsLetter /> */}
       {/* <MemoHook /> */}
-      <Parent />
+      {/* <Parent /> */}
+      <List />
     </>
   );
 }
