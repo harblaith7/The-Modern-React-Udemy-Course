@@ -5,13 +5,15 @@ import "./App.css";
 import MagicNumber from "./components/MagicNumber";
 import SignUpToNewsLetter from "./components/SignUpToNewsLetter";
 import MemoHook from "./components/MemoHook";
+import Parent from "./components/Memo/Parent";
 
 function App() {
   return (
     <>
       {/* <MagicNumber /> */}
       {/* <SignUpToNewsLetter /> */}
-      <MemoHook />
+      {/* <MemoHook /> */}
+      <Parent />
     </>
   );
 }
