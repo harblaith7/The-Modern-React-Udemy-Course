@@ -1,10 +1,13 @@
 import "./App.css";
+import Nav from "./components/Nav";
+import HomePage from "./pages/HomePage";
 
 function App() {
   return (
     <>
-      <div>
-        <h1 className="bg-red-700">Hello there</h1>
+      <div className="w-[800px] m-auto bg-white text-black">
+        <Nav />
+        <HomePage />
       </div>
     </>
   );
