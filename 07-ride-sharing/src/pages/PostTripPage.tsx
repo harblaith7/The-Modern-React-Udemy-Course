@@ -1,56 +1,32 @@
-import { useState } from "react";
+import { useForm, SubmitHandler } from "react-hook-form";
+
+type Inputs = {
+  origin: string;
+  destination: string;
+  departureDate: string;
+  departureTime: string;
+  tripDetails: string;
+  numberOfSeats: string;
+  price: string;
+  carImgUrl: string;
+};
 
 export default function PostTripPage() {
-  //   const [origin, setOrigin] = useState("Vancouver");
-  //   const [destination, setDestination] = useState("Ottawa");
-  //   const [departureDate, setDepartureDate] = useState("");
-  //   const [departureTime, setDepartureTime] = useState("");
-  //   const [tripDetails, setTripDetails] = useState("");
-  //   const [numberOfSeats, setNumberOfSeats] = useState("");
-  //   const [price, setPrice] = useState("");
-  //   const [carImgUrl, setCarImgUrl] = useState("");
-
-  const [formState, setFormState] = useState({
-    origin: "",
-    destination: "",
-    departureDate: "",
-    departureTime: "",
-    tripDetails: "",
-    numberOfSeats: "",
-    price: "",
-    carImgUrl: "",
-  });
-
-  const handleChange = (key: string, value: string) => {
-    setFormState({
-      ...formState,
-      [key]: value,
-    });
-  };
-
   const {
-    origin,
-    departureDate,
-    destination,
-    departureTime,
-    tripDetails,
-    numberOfSeats,
-    price,
-    carImgUrl,
-  } = formState;
+    register,
+    handleSubmit,
+    // watch,
+    // formState: { errors },
+  } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
   return (
     <div>
-      <form className="flex flex-col">
+      <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
         {/* ORIGN */}
         <div>
           <label htmlFor="origin">Origin</label>
-          <select
-            name="origin"
-            id="origin"
-            value={origin}
-            onChange={(e) => handleChange(e.target.name, e.target.value)}
-          >
+          <select id="origin" {...register("origin")}>
             <option value="Vancouver">Vancouver</option>
             <option value="Ottawa">Ottawa</option>
             <option value="Toronto">Toronto</option>
@@ -60,12 +36,7 @@ export default function PostTripPage() {
         {/* DESTINATION */}
         <div>
           <label htmlFor="destination">Destination</label>
-          <select
-            name="destination"
-            id="destination"
-            value={destination}
-            onChange={(e) => handleChange(e.target.name, e.target.value)}
-          >
+          <select id="destination" {...register("destination")}>
             <option value="Vancouver">Vancouver</option>
             <option value="Ottawa">Ottawa</option>
             <option value="Toronto">Toronto</option>
@@ -77,10 +48,8 @@ export default function PostTripPage() {
           <label htmlFor="departureDate">Departure Date</label>
           <input
             type="date"
-            name="departureDate"
             id="departureDate"
-            value={departureDate}
-            onChange={(e) => handleChange(e.target.name, e.target.value)}
+            {...register("departureDate")}
           />
         </div>
 
@@ -89,10 +58,8 @@ export default function PostTripPage() {
           <label htmlFor="departureTime">Departure Time</label>
           <input
             type="time"
-            name="departureTime"
             id="departureTime"
-            value={departureTime}
-            onChange={(e) => handleChange(e.target.name, e.target.value)}
+            {...register("departureTime")}
           />
         </div>
 
@@ -101,10 +68,8 @@ export default function PostTripPage() {
           <label htmlFor="tripDetails">Trip Details</label>
           <textarea
             className="border"
-            name="tripDetails"
             id="tripDetails"
-            value={tripDetails}
-            onChange={(e) => handleChange(e.target.name, e.target.value)}
+            {...register("tripDetails")}
           ></textarea>
         </div>
 
@@ -114,22 +79,15 @@ export default function PostTripPage() {
           <input
             className="border"
             type="text"
-            name="carImgUrl"
             id="carImgUrl"
-            value={carImgUrl}
-            onChange={(e) => handleChange(e.target.name, e.target.value)}
+            {...register("carImgUrl")}
           />
         </div>
 
         {/* NUMBER 0F SEATS */}
         <div>
           <label htmlFor="numberOfSeats">Number of Seats</label>
-          <select
-            name="numberOfSeats"
-            id="numberOfSeats"
-            value={numberOfSeats}
-            onChange={(e) => handleChange(e.target.name, e.target.value)}
-          >
+          <select id="numberOfSeats" {...register("numberOfSeats")}>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -142,10 +100,8 @@ export default function PostTripPage() {
           <input
             className="border"
             type="number"
-            name="price"
             id="price"
-            value={price}
-            onChange={(e) => handleChange(e.target.name, e.target.value)}
+            {...register("price")}
           />
         </div>
 
