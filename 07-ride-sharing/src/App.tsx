@@ -1,6 +1,8 @@
 import "./App.css";
 import Nav from "./components/Nav";
+import DashboardPage from "./pages/DashboardPage";
 import HomePage from "./pages/HomePage";
+import PostTripPage from "./pages/PostTripPage";
 import RequestPage from "./pages/RequestPage";
 import SearchPage from "./pages/SearchPage";
 
@@ -11,10 +13,21 @@ function App() {
         <Nav />
         {/* <HomePage /> */}
         {/* <SearchPage /> */}
-        <RequestPage />
+        {/* <RequestPage /> */}
+        {/* <DashboardPage /> */}
+        <PostTripPage />
       </div>
     </>
   );
 }
 
 export default App;
+
+// Origin // select
+// Destination // select
+// Depature date // input date
+// Depature time // input time
+// Trip details // textarea
+// Img // input
+// numberOfSeats // select
+// pricePerSeat // input number
