@@ -1,14 +1,43 @@
 import { useState } from "react";
 
 export default function PostTripPage() {
-  const [origin, setOrigin] = useState("Vancouver");
-  const [destination, setDestination] = useState("Ottawa");
-  const [departureDate, setDepartureDate] = useState("");
-  const [departureTime, setDepartureTime] = useState("");
-  const [tripDetails, setTripDetails] = useState("");
-  const [numberOfSeats, setNumberOfSeats] = useState("");
-  const [price, setPrice] = useState("");
-  const [carImgUrl, setCarImgUrl] = useState("");
+  //   const [origin, setOrigin] = useState("Vancouver");
+  //   const [destination, setDestination] = useState("Ottawa");
+  //   const [departureDate, setDepartureDate] = useState("");
+  //   const [departureTime, setDepartureTime] = useState("");
+  //   const [tripDetails, setTripDetails] = useState("");
+  //   const [numberOfSeats, setNumberOfSeats] = useState("");
+  //   const [price, setPrice] = useState("");
+  //   const [carImgUrl, setCarImgUrl] = useState("");
+
+  const [formState, setFormState] = useState({
+    origin: "",
+    destination: "",
+    departureDate: "",
+    departureTime: "",
+    tripDetails: "",
+    numberOfSeats: "",
+    price: "",
+    carImgUrl: "",
+  });
+
+  const handleChange = (key: string, value: string) => {
+    setFormState({
+      ...formState,
+      [key]: value,
+    });
+  };
+
+  const {
+    origin,
+    departureDate,
+    destination,
+    departureTime,
+    tripDetails,
+    numberOfSeats,
+    price,
+    carImgUrl,
+  } = formState;
 
   return (
     <div>
@@ -20,7 +49,7 @@ export default function PostTripPage() {
             name="origin"
             id="origin"
             value={origin}
-            onChange={(e) => setOrigin(e.target.value)}
+            onChange={(e) => handleChange(e.target.name, e.target.value)}
           >
             <option value="Vancouver">Vancouver</option>
             <option value="Ottawa">Ottawa</option>
@@ -35,7 +64,7 @@ export default function PostTripPage() {
             name="destination"
             id="destination"
             value={destination}
-            onChange={(e) => setDestination(e.target.value)}
+            onChange={(e) => handleChange(e.target.name, e.target.value)}
           >
             <option value="Vancouver">Vancouver</option>
             <option value="Ottawa">Ottawa</option>
@@ -51,7 +80,7 @@ export default function PostTripPage() {
             name="departureDate"
             id="departureDate"
             value={departureDate}
-            onChange={(e) => setDepartureDate(e.target.value)}
+            onChange={(e) => handleChange(e.target.name, e.target.value)}
           />
         </div>
 
@@ -63,7 +92,7 @@ export default function PostTripPage() {
             name="departureTime"
             id="departureTime"
             value={departureTime}
-            onChange={(e) => setDepartureTime(e.target.value)}
+            onChange={(e) => handleChange(e.target.name, e.target.value)}
           />
         </div>
 
@@ -75,7 +104,7 @@ export default function PostTripPage() {
             name="tripDetails"
             id="tripDetails"
             value={tripDetails}
-            onChange={(e) => setTripDetails(e.target.value)}
+            onChange={(e) => handleChange(e.target.name, e.target.value)}
           ></textarea>
         </div>
 
@@ -88,7 +117,7 @@ export default function PostTripPage() {
             name="carImgUrl"
             id="carImgUrl"
             value={carImgUrl}
-            onChange={(e) => setCarImgUrl(e.target.value)}
+            onChange={(e) => handleChange(e.target.name, e.target.value)}
           />
         </div>
 
@@ -99,7 +128,7 @@ export default function PostTripPage() {
             name="numberOfSeats"
             id="numberOfSeats"
             value={numberOfSeats}
-            onChange={(e) => setNumberOfSeats(e.target.value)}
+            onChange={(e) => handleChange(e.target.name, e.target.value)}
           >
             <option value="1">1</option>
             <option value="2">2</option>
@@ -116,7 +145,7 @@ export default function PostTripPage() {
             name="price"
             id="price"
             value={price}
-            onChange={(e) => setPrice(e.target.value)}
+            onChange={(e) => handleChange(e.target.name, e.target.value)}
           />
         </div>
 
