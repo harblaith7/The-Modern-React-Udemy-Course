@@ -7,7 +7,7 @@ type Inputs = {
   departureTime: string;
   tripDetails: string;
   numberOfSeats: string;
-  price: string;
+  price: number;
   carImgUrl: string;
 };
 
@@ -26,7 +26,7 @@ export default function PostTripPage() {
         {/* ORIGN */}
         <div>
           <label htmlFor="origin">Origin</label>
-          <select id="origin" {...register("origin")}>
+          <select id="origin" {...(register("origin"), { required: true })}>
             <option value="Vancouver">Vancouver</option>
             <option value="Ottawa">Ottawa</option>
             <option value="Toronto">Toronto</option>
@@ -36,7 +36,10 @@ export default function PostTripPage() {
         {/* DESTINATION */}
         <div>
           <label htmlFor="destination">Destination</label>
-          <select id="destination" {...register("destination")}>
+          <select
+            id="destination"
+            {...(register("destination"), { required: true })}
+          >
             <option value="Vancouver">Vancouver</option>
             <option value="Ottawa">Ottawa</option>
             <option value="Toronto">Toronto</option>
@@ -49,7 +52,7 @@ export default function PostTripPage() {
           <input
             type="date"
             id="departureDate"
-            {...register("departureDate")}
+            {...(register("departureDate"), { required: true })}
           />
         </div>
 
@@ -59,7 +62,7 @@ export default function PostTripPage() {
           <input
             type="time"
             id="departureTime"
-            {...register("departureTime")}
+            {...(register("departureTime"), { required: true })}
           />
         </div>
 
@@ -69,7 +72,8 @@ export default function PostTripPage() {
           <textarea
             className="border"
             id="tripDetails"
-            {...register("tripDetails")}
+            {...(register("tripDetails"),
+            { required: true, minLength: 10, maxLength: 150 })}
           ></textarea>
         </div>
 
@@ -80,14 +84,17 @@ export default function PostTripPage() {
             className="border"
             type="text"
             id="carImgUrl"
-            {...register("carImgUrl")}
+            {...(register("carImgUrl"), { required: true })}
           />
         </div>
 
         {/* NUMBER 0F SEATS */}
         <div>
           <label htmlFor="numberOfSeats">Number of Seats</label>
-          <select id="numberOfSeats" {...register("numberOfSeats")}>
+          <select
+            id="numberOfSeats"
+            {...(register("numberOfSeats"), { required: true })}
+          >
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -101,7 +108,7 @@ export default function PostTripPage() {
             className="border"
             type="number"
             id="price"
-            {...register("price")}
+            {...(register("price"), { required: true, max: 500, min: 5 })}
           />
         </div>
 
