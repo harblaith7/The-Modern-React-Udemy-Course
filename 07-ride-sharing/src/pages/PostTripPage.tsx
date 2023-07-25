@@ -15,11 +15,11 @@ export default function PostTripPage() {
   const {
     register,
     handleSubmit,
-    // watch,
-    // formState: { errors },
+    formState: { errors },
+    getValues,
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
-
+  console.log(errors);
   return (
     <div>
       <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
@@ -31,6 +31,9 @@ export default function PostTripPage() {
             <option value="Ottawa">Ottawa</option>
             <option value="Toronto">Toronto</option>
           </select>
+          {errors.origin?.type === "required" && (
+            <span className="text-red-400">This field is required</span>
+          )}
         </div>
 
         {/* DESTINATION */}
@@ -44,6 +47,9 @@ export default function PostTripPage() {
             <option value="Ottawa">Ottawa</option>
             <option value="Toronto">Toronto</option>
           </select>
+          {errors.destination?.type === "required" && (
+            <span className="text-red-400">This field is required</span>
+          )}
         </div>
 
         {/* DEPATURE DATE */}
@@ -52,8 +58,27 @@ export default function PostTripPage() {
           <input
             type="date"
             id="departureDate"
-            {...register("departureDate", { required: true })}
+            {...register("departureDate", {
+              required: true,
+              validate: () => {
+                const departureTime = getValues("departureTime");
+                const departureDate = getValues("departureDate");
+                const date = new Date(`${departureDate} ${departureTime}`);
+
+                if (new Date() > date) {
+                  return "Is your car a time machine, if not set a date in the future";
+                }
+
+                return true;
+              },
+            })}
           />
+          {errors.departureDate?.type === "required" && (
+            <span className="text-red-400">This field is required</span>
+          )}
+          {errors.departureDate?.type === "validate" && (
+            <span className="text-red-400">{errors.departureDate.message}</span>
+          )}
         </div>
 
         {/* DEPATURE TIME */}
@@ -64,6 +89,9 @@ export default function PostTripPage() {
             id="departureTime"
             {...register("departureTime", { required: true })}
           />
+          {errors.departureTime?.type === "required" && (
+            <span className="text-red-400">This field is required</span>
+          )}
         </div>
 
         {/* TRIP DETAILS */}
@@ -78,6 +106,14 @@ export default function PostTripPage() {
               maxLength: 150,
             })}
           ></textarea>
+          {errors.tripDetails?.type === "required" && (
+            <span className="text-red-400">This field is required</span>
+          )}
+          {errors.tripDetails?.type === "minLength" && (
+            <span className="text-red-400">
+              Needs to be greater than 10 characters
+            </span>
+          )}
         </div>
 
         {/* IMG */}
@@ -89,6 +125,9 @@ export default function PostTripPage() {
             id="carImgUrl"
             {...register("carImgUrl", { required: true })}
           />
+          {errors.carImgUrl?.type === "required" && (
+            <span className="text-red-400">This field is required</span>
+          )}
         </div>
 
         {/* NUMBER 0F SEATS */}
@@ -102,6 +141,9 @@ export default function PostTripPage() {
             <option value="2">2</option>
             <option value="3">3</option>
           </select>
+          {errors.numberOfSeats?.type === "required" && (
+            <span className="text-red-400">This field is required</span>
+          )}
         </div>
 
         {/* PRICE*/}
@@ -113,6 +155,15 @@ export default function PostTripPage() {
             id="price"
             {...register("price", { required: true, max: 500, min: 5 })}
           />
+          {errors.price?.type === "required" && (
+            <span className="text-red-400">This field is required</span>
+          )}
+          {errors.price?.type === "min" && (
+            <span className="text-red-400">Must be greater than $5</span>
+          )}
+          {errors.price?.type === "max" && (
+            <span className="text-red-400">Must be less than than $500</span>
+          )}
         </div>
 
         <input type="submit" />
