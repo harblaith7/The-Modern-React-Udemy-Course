@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Nav";
 import DashboardPage from "./pages/DashboardPage";
@@ -15,19 +16,11 @@ function App() {
         {/* <SearchPage /> */}
         {/* <RequestPage /> */}
         {/* <DashboardPage /> */}
-        <PostTripPage />
+        {/* <PostTripPage /> */}
+        <Outlet />
       </div>
     </>
   );
 }
 
 export default App;
-
-// Origin // select
-// Destination // select
-// Depature date // input date
-// Depature time // input time
-// Trip details // textarea
-// Img // input
-// numberOfSeats // select
-// pricePerSeat // input number
