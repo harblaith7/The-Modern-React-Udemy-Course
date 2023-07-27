@@ -1,6 +1,4 @@
 export default function SearchBar() {
-  const handleSearch = () => {};
-
   return (
     <div className="bg-white rounded-3xl shadow p-4 flex items-center">
       <input
