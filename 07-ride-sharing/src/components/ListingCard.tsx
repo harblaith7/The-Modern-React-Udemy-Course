@@ -1,4 +1,9 @@
-export default function ListingCard() {
+import { Trip } from "../hooks/useFetchTrips";
+
+export default function ListingCard({ trip }: { trip: Trip }) {
+  const { origin, destination, departureDateTime, seats, price, image, id } =
+    trip;
+
   return (
     <div className="shadow border p-3 mt-5 text-xs flex justify-between">
       <div>
@@ -11,35 +16,33 @@ export default function ListingCard() {
 
       <div className="flex flex-col justify-between">
         <div>
-          <h2 className="text-blue-600 text-sm">Ottawa to Toronto</h2>
+          <h2 className="text-blue-600 text-sm">
+            {origin} to {destination}
+          </h2>
           <div className="flex justify-between">
             <p className="mr-3">Leaving</p>
-            <p>Wednesday, July 26 at 12:15am</p>
+            <p>{departureDateTime}</p>
           </div>
         </div>
         <div className="text-gray-400">
           <div className="flex">
             <p className="w-32">Pickup:</p>
-            <p>Ottawa ON</p>
+            <p>{origin}</p>
           </div>
           <div className="flex">
             <p className="w-32">Dropoff:</p>
-            <p>Toronto ON</p>
+            <p>{destination}</p>
           </div>
         </div>
       </div>
 
       <div>
-        <img
-          src="https://www.lucidmotors.com/s3fs-public/2023-04/home-hero-stealth-1080p.webp"
-          alt=""
-          className="w-44 rounded"
-        />
+        <img src={image} alt="" className="w-44 h-[120px] rounded" />
       </div>
 
       <div className="font-bold flex flex-col items-end">
-        <p>4 seats left</p>
-        <p className="text-green-400">$45</p>
+        <p>{seats} seats left</p>
+        <p className="text-green-400">${price}</p>
         <p className="font-light">per seat</p>
       </div>
     </div>
