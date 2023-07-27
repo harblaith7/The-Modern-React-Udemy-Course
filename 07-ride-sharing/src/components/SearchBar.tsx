@@ -1,4 +1,6 @@
 export default function SearchBar() {
+  const handleSearch = () => {};
+
   return (
     <div className="bg-white rounded-3xl shadow p-4 flex items-center">
       <input
@@ -12,7 +14,10 @@ export default function SearchBar() {
         className="bg-gray-100 rounded p-3 mr-2 w-full"
       />
       <input type="date" className="bg-gray-100 rounded p-3 h-12 mr-2 w-full" />
-      <button className="bg-orange-500 h-12 rounded text-white w-full font-bold">
+      <button
+        className="bg-orange-500 h-12 rounded text-white w-full font-bold"
+        onClick={handleSearch}
+      >
         Search
       </button>
     </div>
