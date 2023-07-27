@@ -1,9 +1,11 @@
 import { Trip } from "../hooks/useFetchTrips";
+import { format } from "date-fns";
 
 export default function ListingCard({ trip }: { trip: Trip }) {
   const { origin, destination, departureDateTime, seats, price, image, id } =
     trip;
 
+  const dateFormated = format(new Date(departureDateTime), "iii do 'at' p");
   return (
     <div className="shadow border p-3 mt-5 text-xs flex justify-between">
       <div>
@@ -21,7 +23,7 @@ export default function ListingCard({ trip }: { trip: Trip }) {
           </h2>
           <div className="flex justify-between">
             <p className="mr-3">Leaving</p>
-            <p>{departureDateTime}</p>
+            <p>{dateFormated}</p>
           </div>
         </div>
         <div className="text-gray-400">
