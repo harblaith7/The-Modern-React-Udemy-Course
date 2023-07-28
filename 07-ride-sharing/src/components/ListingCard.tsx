@@ -1,5 +1,6 @@
 import { Trip } from "../hooks/useFetchTrips";
 import { format } from "date-fns";
+import { useNavigate } from "react-router-dom";
 
 export default function ListingCard({ trip }: { trip: Trip }) {
   const { origin, destination, departureDateTime, seats, price, image, id } =
@@ -9,8 +10,14 @@ export default function ListingCard({ trip }: { trip: Trip }) {
     new Date(departureDateTime),
     "MMMM, iii do 'at' p"
   );
+
+  const navigate = useNavigate();
+
   return (
-    <div className="shadow border p-3 mt-5 text-xs flex justify-between">
+    <div
+      className="shadow border p-3 mt-5 text-xs flex justify-between"
+      onClick={() => navigate(`/request/${id}`)}
+    >
       <div>
         <img
           src="https://www.wilsoncenter.org/sites/default/files/styles/large/public/media/images/person/james-person-1.jpg"

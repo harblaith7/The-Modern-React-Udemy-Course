@@ -11,6 +11,7 @@ import "./index.css";
 import DashboardPage from "./pages/DashboardPage";
 import HomePage from "./pages/HomePage";
 import PostTripPage from "./pages/PostTripPage";
+import RequestPage from "./pages/RequestPage";
 import SearchPage from "./pages/SearchPage";
 
 const router = createBrowserRouter(
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route path="/" element={<HomePage />} />
       <Route path="/search" element={<SearchPage />} />
+      <Route path="/request/:id" element={<RequestPage />} />
       <Route path="/dashboard">
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/dashboard/post" element={<PostTripPage />} />
