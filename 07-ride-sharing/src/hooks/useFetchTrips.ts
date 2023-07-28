@@ -67,22 +67,41 @@ const reducer = (_: State, action: Action): State => {
   }
 };
 
-type UseFetchTripReturnType = [State, () => Promise<void>];
+type UseFetchTripReturnType = [State, (filter?: FilterTrip) => Promise<void>];
+
+export interface FilterTrip {
+  origin: string;
+  destination: string;
+  date: string;
+}
+
+const queryTrips = (filter?: FilterTrip) => {
+  if (filter) {
+    const start = `${filter.date} 00:00:00`;
+
+    const end = `${filter.date} 23:59:59`;
+    return supabase
+      .from("trips")
+      .select("*", { count: "exact" })
+      .eq("origin", filter.origin)
+      .eq("destination", filter.destination)
+      .gte("departure_datetime", start)
+      .lte("departure_datetime", end);
+  } else {
+    return supabase.from("trips").select("*", { count: "exact" });
+  }
+};
 
 const useFetchTrips = (): UseFetchTripReturnType => {
   const [{ data, loading, error }, dispatch] = useReducer(
     reducer,
     initialState
   );
-  const fetchTrips = async () => {
+  const fetchTrips = async (filter?: FilterTrip) => {
     dispatch({ type: ActionType.FETCHING_DATA });
 
     try {
-      const { data, count, error } = await supabase
-        .from("trips")
-        .select("*", { count: "exact" })
-        .eq("origin", "Ottawa")
-        .eq("destination", "Toronto");
+      const { data, count, error } = await queryTrips(filter);
 
       if (data) {
         const trips =

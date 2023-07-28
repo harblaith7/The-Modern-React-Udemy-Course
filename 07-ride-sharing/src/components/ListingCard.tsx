@@ -5,7 +5,10 @@ export default function ListingCard({ trip }: { trip: Trip }) {
   const { origin, destination, departureDateTime, seats, price, image, id } =
     trip;
 
-  const dateFormated = format(new Date(departureDateTime), "iii do 'at' p");
+  const dateFormated = format(
+    new Date(departureDateTime),
+    "MMMM, iii do 'at' p"
+  );
   return (
     <div className="shadow border p-3 mt-5 text-xs flex justify-between">
       <div>

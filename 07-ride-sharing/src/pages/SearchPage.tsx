@@ -1,20 +1,36 @@
 import { useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import ListingCard from "../components/ListingCard";
 import SearchBar from "../components/SearchBar";
-import useFetchTrips from "../hooks/useFetchTrips";
+import useFetchTrips, { FilterTrip } from "../hooks/useFetchTrips";
 
 export default function SearchPage() {
   const [{ data, loading, error }, fetchTrips] = useFetchTrips();
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
-    fetchTrips();
+    const origin = searchParams.get("origin");
+    const destination = searchParams.get("destination");
+    const date = searchParams.get("date");
+
+    if (origin && destination && date) {
+      fetchTrips({
+        origin,
+        destination,
+        date,
+      });
+    } else {
+      fetchTrips();
+    }
   }, []);
 
-  console.log({ data, error, loading });
+  const handleSearch = (filter: FilterTrip) => {
+    fetchTrips(filter);
+  };
 
   return (
     <div>
-      <SearchBar />
+      <SearchBar onSearch={handleSearch} />
       <div>
         {loading && <div>Loading...</div>}
         {error && <p>{error}</p>}
