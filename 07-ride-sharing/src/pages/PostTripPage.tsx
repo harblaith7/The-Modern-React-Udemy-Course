@@ -38,14 +38,10 @@ export default function PostTripPage() {
       price: parseFloat(price),
       detail: tripDetails,
     };
-    console.log(trip);
 
     try {
-      const response = await supabase.from("trips").insert(trip);
-      console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
+      await supabase.from("trips").insert(trip);
+    } catch (error) {}
   };
 
   return (

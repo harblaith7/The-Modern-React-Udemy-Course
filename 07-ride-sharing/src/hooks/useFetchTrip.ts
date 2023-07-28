@@ -92,7 +92,6 @@ const useFetchTrip = (): UseFetchTripReturnType => {
       const { data, count, error } = await queryTrip(id);
 
       if (data) {
-        console.log(data);
         const {
           id,
           origin,

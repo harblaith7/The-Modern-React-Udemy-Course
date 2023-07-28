@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import PersonInfo from "../components/RequestPage/PersonInfo";
 import RequestCard from "../components/RequestPage/RequestCard";
 import RequiredSeats from "../components/RequestPage/RequiredSeats";
@@ -7,24 +8,33 @@ import useFetchTrip from "../hooks/useFetchTrip";
 
 export default function RequestPage() {
   const [{ data, loading, error }, fetchTrip] = useFetchTrip();
-
-  console.log({ data, loading, error });
+  const { id } = useParams();
 
   useEffect(() => {
-    fetchTrip(3);
+    const tripId = parseInt(id as string);
+    fetchTrip(tripId);
   }, []);
 
-  return (
-    <div className="flex">
-      <div className="w-[500px]">
-        <PersonInfo />
-        <TripInfo />
-        <RequiredSeats />
-      </div>
+  console.log(data);
 
-      <div className="w-[350px]">
-        <RequestCard />
-      </div>
-    </div>
-  );
+  const renderContent = () => {
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>{error}</div>;
+    if (data)
+      return (
+        <>
+          <div className="w-[500px]">
+            <PersonInfo />
+            <TripInfo trip={data} />
+            <RequiredSeats />
+          </div>
+
+          <div className="w-[350px]">
+            <RequestCard />
+          </div>
+        </>
+      );
+  };
+
+  return <div className="flex">{renderContent()}</div>;
 }
