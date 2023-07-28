@@ -30,7 +30,7 @@ export default function RequestPage() {
           </div>
 
           <div className="w-[350px]">
-            <RequestCard />
+            <RequestCard trip={data} />
           </div>
         </>
       );

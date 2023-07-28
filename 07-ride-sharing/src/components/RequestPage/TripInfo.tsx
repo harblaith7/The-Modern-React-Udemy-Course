@@ -1,4 +1,5 @@
 import { Trip } from "../../hooks/useFetchTrip";
+import { format } from "date-fns";
 
 export default function TripInfo({ trip }: { trip: Trip }) {
   const {
@@ -10,6 +11,9 @@ export default function TripInfo({ trip }: { trip: Trip }) {
     seats,
     image,
   } = trip;
+
+  const date = format(new Date(departureDateTime), "iiii, MMMM do 'at' h:mmaa");
+
   return (
     <div>
       <div className="mt-5 flex justify-between">
@@ -17,7 +21,7 @@ export default function TripInfo({ trip }: { trip: Trip }) {
           <h3 className="text-blue-500">
             {origin} to {destination}
           </h3>
-          <p className="text-gray-600 text-sm">{departureDateTime}</p>
+          <p className="text-gray-600 text-sm">{date}</p>
         </div>
         <div>
           <h3 className="font-semibold">{seats} seats left</h3>
