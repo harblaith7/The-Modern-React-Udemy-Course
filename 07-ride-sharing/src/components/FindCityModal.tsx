@@ -28,10 +28,14 @@ export default function FindCityModal() {
   const handleClose = () => setOpen(false);
 
   useEffect(() => {
-    const citiesFiltered: Location[] = cities.filter((location: Location) =>
-      location[0].toLowerCase().startsWith(citySearch.toLowerCase())
-    );
-    setCitySuggestions(citiesFiltered);
+    if (citySearch.length >= 3) {
+      const citiesFiltered: Location[] = cities.filter((location: Location) =>
+        location[0].toLowerCase().startsWith(citySearch.toLowerCase())
+      );
+      setCitySuggestions(citiesFiltered);
+    } else {
+      setCitySuggestions([]);
+    }
   }, [citySearch]);
 
   return (
