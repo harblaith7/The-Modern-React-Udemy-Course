@@ -34,7 +34,11 @@ export default function FindCityModal({
   const [citySuggestions, setCitySuggestions] = useState<Location[]>([]);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleClose = () => {
+    setOpen(false);
+    setCitySearch("");
+    setCitySuggestions([]);
+  };
 
   const handleClick = (location: Location) => {
     const city = `${location[0]}, ${location[1]}`;
@@ -77,6 +81,9 @@ export default function FindCityModal({
       >
         <Fade in={open}>
           <Box sx={style}>
+            <div className="w-full flex justify-end">
+              <button onClick={handleClose}>X</button>
+            </div>
             <div className="w-[700px] m-auto justify-between items-start text-black py-14">
               <div className="w-full">
                 <h3 className="font-semibold text-2xl">{label}</h3>

@@ -68,9 +68,11 @@ export default function PostTripPage() {
               id="origin"
               {...register("origin", { required: true })}
             >
-              <option value="Vancouver">Vancouver</option>
-              <option value="Ottawa">Ottawa</option>
-              <option value="Toronto">Toronto</option>
+              <option value="VANCOUVER, BC">Vancouver, BC</option>
+              <option value="OTTAWA, ON">Ottawa, ON</option>
+              <option value="TORONTO, ON">Toronto, ON</option>
+              <option value="MONTREAL, QC">Montreal, QC</option>
+              <option value="CALGARY, AB">Calgary, AB</option>
             </select>
             {errors.origin?.type === "required" && (
               <span className="text-red-400 text-[10px]">
@@ -89,9 +91,11 @@ export default function PostTripPage() {
               {...register("destination", { required: true })}
               className="w-full bg-gray-100 p-2 rounded mb-2"
             >
-              <option value="Vancouver">Vancouver</option>
-              <option value="Ottawa">Ottawa</option>
-              <option value="Toronto">Toronto</option>
+              <option value="VANCOUVER, BC">Vancouver, BC</option>
+              <option value="OTTAWA, ON">Ottawa, ON</option>
+              <option value="TORONTO, ON">Toronto, ON</option>
+              <option value="MONTREAL, QC">Montreal, QC</option>
+              <option value="CALGARY, AB">Calgary, AB</option>
             </select>
             {errors.destination?.type === "required" && (
               <span className="text-red-400 text-[10px]">

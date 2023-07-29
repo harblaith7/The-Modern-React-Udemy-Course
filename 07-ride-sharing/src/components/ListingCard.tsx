@@ -13,6 +13,12 @@ export default function ListingCard({ trip }: { trip: Trip }) {
 
   const navigate = useNavigate();
 
+  const originCity = origin.split(", ")[0].toLowerCase();
+  const originProvidence = origin.split(", ")[1];
+
+  const destinationCity = destination.split(", ")[0].toLowerCase();
+  const destinationProvidence = destination.split(", ")[1];
+
   return (
     <div
       className="shadow border p-3 mt-5 text-xs flex justify-between"
@@ -28,8 +34,10 @@ export default function ListingCard({ trip }: { trip: Trip }) {
 
       <div className="flex flex-col justify-between">
         <div>
-          <h2 className="text-blue-600 text-sm">
-            {origin} to {destination}
+          <h2 className="text-blue-600 text-sm capitalize">
+            {originCity}, {originProvidence} to{" "}
+            <span className="capitalize">{destinationCity}</span>,{" "}
+            {destinationProvidence}
           </h2>
           <div className="flex justify-between">
             <p className="mr-3">Leaving</p>
@@ -39,11 +47,16 @@ export default function ListingCard({ trip }: { trip: Trip }) {
         <div className="text-gray-400">
           <div className="flex">
             <p className="w-32">Pickup:</p>
-            <p>{origin}</p>
+            <p className="capitalize">
+              {" "}
+              {originCity}, {originProvidence}
+            </p>
           </div>
           <div className="flex">
             <p className="w-32">Dropoff:</p>
-            <p>{destination}</p>
+            <p className="capitalize">
+              {destinationCity}, {destinationProvidence}
+            </p>
           </div>
         </div>
       </div>
