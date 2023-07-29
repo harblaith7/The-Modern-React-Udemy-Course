@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+import CircularProgress from "@mui/material/CircularProgress";
 import ListingCard from "../components/ListingCard";
 import SearchBar from "../components/SearchBar";
 import useFetchTrips, { FilterTrip } from "../hooks/useFetchTrips";
@@ -32,7 +33,11 @@ export default function SearchPage() {
     <div>
       <SearchBar onSearch={handleSearch} />
       <div>
-        {loading && <div>Loading...</div>}
+        {loading && (
+          <div className="py-16 flex justify-center">
+            <CircularProgress />
+          </div>
+        )}
         {error && <p>{error}</p>}
         {data && (
           <div>
