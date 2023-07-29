@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import cities from "../data/cities.json";
 import Backdrop from "@mui/material/Backdrop";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -17,10 +18,21 @@ const style = {
   p: 4,
 };
 
+type Location = [city: string, providence: string];
+
 export default function FindCityModal() {
+  const [citySearch, setCitySearch] = useState("");
+  const [citySuggestions, setCitySuggestions] = useState<Location[]>([]);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+
+  useEffect(() => {
+    const citiesFiltered: Location[] = cities.filter((location: Location) =>
+      location[0].toLowerCase().startsWith(citySearch.toLowerCase())
+    );
+    setCitySuggestions(citiesFiltered);
+  }, [citySearch]);
 
   return (
     <div>
@@ -46,11 +58,15 @@ export default function FindCityModal() {
                 <input
                   type="text"
                   className="border-b w-full outline-none mt-4 pb-4 bg-white"
+                  value={citySearch}
+                  onChange={(e) => setCitySearch(e.target.value)}
                 />
                 <div>
-                  <button className="border-b w-full py-3 hover:bg-gray-100 text-left px-1 capitalize">
-                    <span>Ottawa</span>, <span>ON</span>
-                  </button>
+                  {citySuggestions.map((location) => (
+                    <button className="border-b w-full py-3 hover:bg-gray-100 text-left px-1 capitalize">
+                      <span>{location[0]}</span>, <span>{location[1]}</span>
+                    </button>
+                  ))}
                 </div>
               </div>
             </div>
