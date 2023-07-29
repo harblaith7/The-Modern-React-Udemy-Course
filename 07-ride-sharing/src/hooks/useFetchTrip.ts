@@ -92,6 +92,12 @@ const useFetchTrip = (): UseFetchTripReturnType => {
       const { data, count, error } = await queryTrip(id);
 
       if (data) {
+        if (data.length === 0) {
+          return dispatch({
+            type: ActionType.FETCH_FAILED,
+            payload: "Can't find the trip you are looking at",
+          });
+        }
         const {
           id,
           origin,

@@ -1,5 +1,7 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 import { supabase } from "../supabase";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 type Inputs = {
   origin: string;
@@ -13,6 +15,9 @@ type Inputs = {
 };
 
 export default function PostTripPage() {
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -29,6 +34,7 @@ export default function PostTripPage() {
     price,
     tripDetails,
   }) => {
+    setLoading(true);
     const trip = {
       origin,
       destination,
@@ -41,7 +47,11 @@ export default function PostTripPage() {
 
     try {
       await supabase.from("trips").insert(trip);
-    } catch (error) {}
+      navigate("/dashboard");
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+    }
   };
 
   return (
@@ -243,6 +253,7 @@ export default function PostTripPage() {
         <input
           type="submit"
           className="mt-3 p-2 bg-orange-400 text-white font-bold rounded"
+          disabled={loading}
         />
       </form>
     </div>
