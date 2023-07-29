@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FilterTrip } from "../hooks/useFetchTrips";
 import { useSearchParams } from "react-router-dom";
+import FindCityModal from "./FindCityModal";
 
 interface SearchBarProps {
   onSearch: (filter: FilterTrip) => void;
@@ -13,7 +14,7 @@ export default function SearchBar({ onSearch: handleSearch }: SearchBarProps) {
     date: "",
   });
   const [, setSearchParams] = useSearchParams();
-
+  console.log(filters);
   const handleClick = () => {
     if (filters.origin && filters.destination && filters.date) {
       handleSearch(filters);
@@ -21,34 +22,18 @@ export default function SearchBar({ onSearch: handleSearch }: SearchBarProps) {
     }
   };
 
+  const handleChangeOrigin = (text: string) => {
+    setFilters({ ...filters, origin: text });
+  };
+
+  const handleChangeDestination = (text: string) => {
+    setFilters({ ...filters, destination: text });
+  };
+
   return (
     <div className="bg-white rounded-3xl shadow p-4 flex items-center">
-      <input
-        type="text"
-        placeholder="From"
-        className="bg-gray-100 rounded p-3 mr-2 w-full"
-        name="origin"
-        value={filters.origin}
-        onChange={(e) =>
-          setFilters({
-            ...filters,
-            [e.target.name]: e.target.value,
-          })
-        }
-      />
-      <input
-        type="text"
-        placeholder="To"
-        className="bg-gray-100 rounded p-3 mr-2 w-full"
-        name="destination"
-        value={filters.destination}
-        onChange={(e) =>
-          setFilters({
-            ...filters,
-            [e.target.name]: e.target.value,
-          })
-        }
-      />
+      <FindCityModal label="From" onChange={handleChangeOrigin} />
+      <FindCityModal label="To" onChange={handleChangeDestination} />
       <input
         type="date"
         className="bg-gray-100 rounded p-3 h-12 mr-2 w-full"
