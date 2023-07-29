@@ -32,8 +32,16 @@ export default function SearchBar({ onSearch: handleSearch }: SearchBarProps) {
 
   return (
     <div className="bg-white rounded-3xl shadow p-4 flex items-center">
-      <FindCityModal label="From" onChange={handleChangeOrigin} />
-      <FindCityModal label="To" onChange={handleChangeDestination} />
+      <FindCityModal
+        label="From"
+        onChange={handleChangeOrigin}
+        value={filters.origin}
+      />
+      <FindCityModal
+        label="To"
+        onChange={handleChangeDestination}
+        value={filters.destination}
+      />
       <input
         type="date"
         className="bg-gray-100 rounded p-3 h-12 mr-2 w-full"

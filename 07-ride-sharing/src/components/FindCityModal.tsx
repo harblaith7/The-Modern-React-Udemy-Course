@@ -22,11 +22,13 @@ type Location = [city: string, providence: string];
 interface FindCityModalProps {
   label: string;
   onChange: (text: string) => void;
+  value: string;
 }
 
 export default function FindCityModal({
   label,
   onChange: handleChange,
+  value,
 }: FindCityModalProps) {
   const [citySearch, setCitySearch] = useState("");
   const [citySuggestions, setCitySuggestions] = useState<Location[]>([]);
@@ -58,6 +60,7 @@ export default function FindCityModal({
         className="bg-gray-200 rounded p-4 placeholder:text-black w-full capitalize"
         placeholder={label}
         onClick={handleOpen}
+        value={value}
       />
       <Modal
         aria-labelledby="transition-modal-title"
