@@ -4,6 +4,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import ListingCard from "../components/ListingCard";
 import SearchBar from "../components/SearchBar";
 import useFetchTrips, { FilterTrip } from "../hooks/useFetchTrips";
+import FindCityModal from "../components/FindCityModal";
 
 export default function SearchPage() {
   const [{ data, loading, error }, fetchTrips] = useFetchTrips();
@@ -32,6 +33,7 @@ export default function SearchPage() {
   return (
     <div>
       <SearchBar onSearch={handleSearch} />
+      <FindCityModal />
       <div>
         {loading && (
           <div className="py-16 flex justify-center">
