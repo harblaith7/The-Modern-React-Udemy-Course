@@ -5,6 +5,7 @@ const initialState: State = {
   data: null,
   loading: false,
   error: null,
+  count: null,
 };
 
 export interface Trip {
@@ -21,6 +22,7 @@ interface State {
   data: null | Trip[];
   error: null | string;
   loading: boolean;
+  count: null | number;
 }
 
 enum ActionType {
@@ -35,7 +37,10 @@ type Action =
     }
   | {
       type: ActionType.FETCH_SUCCESS;
-      payload: Trip[];
+      payload: {
+        trips: Trip[];
+        count: number;
+      };
     }
   | {
       type: ActionType.FETCH_FAILED;
@@ -49,25 +54,31 @@ const reducer = (_: State, action: Action): State => {
         data: null,
         error: null,
         loading: true,
+        count: null,
       };
     case ActionType.FETCH_FAILED:
       return {
         loading: false,
         data: null,
         error: action.payload,
+        count: null,
       };
     case ActionType.FETCH_SUCCESS:
       return {
         loading: false,
         error: null,
-        data: action.payload,
+        data: action.payload.trips,
+        count: action.payload.count,
       };
     default:
       return initialState;
   }
 };
 
-type UseFetchTripReturnType = [State, (filter?: FilterTrip) => Promise<void>];
+type UseFetchTripReturnType = [
+  State,
+  (page: number, filter?: FilterTrip) => Promise<void>
+];
 
 export interface FilterTrip {
   origin: string;
@@ -75,7 +86,10 @@ export interface FilterTrip {
   date: string;
 }
 
-const queryTrips = (filter?: FilterTrip) => {
+const queryTrips = (page: number, filter?: FilterTrip) => {
+  const from = (page - 1) * 5;
+  const to = from + 4;
+
   if (filter) {
     const start = `${filter.date} 00:00:00`;
 
@@ -86,24 +100,29 @@ const queryTrips = (filter?: FilterTrip) => {
       .eq("origin", filter.origin)
       .eq("destination", filter.destination)
       .gte("departure_datetime", start)
-      .lte("departure_datetime", end);
+      .lte("departure_datetime", end)
+      .range(from, to);
   } else {
-    return supabase.from("trips").select("*", { count: "exact" });
+    return supabase
+      .from("trips")
+      .select("*", { count: "exact" })
+      .range(from, to);
   }
 };
 
 const useFetchTrips = (): UseFetchTripReturnType => {
-  const [{ data, loading, error }, dispatch] = useReducer(
+  const [{ data, loading, error, count }, dispatch] = useReducer(
     reducer,
     initialState
   );
-  const fetchTrips = async (filter?: FilterTrip) => {
+
+  const fetchTrips = async (page: number, filter?: FilterTrip) => {
     dispatch({ type: ActionType.FETCHING_DATA });
 
     try {
-      const { data, count, error } = await queryTrips(filter);
-
-      if (data) {
+      const { data, count, error } = await queryTrips(page, filter);
+      console.log(count);
+      if (data && count) {
         const trips =
           data.map(
             ({
@@ -127,7 +146,7 @@ const useFetchTrips = (): UseFetchTripReturnType => {
             }
           ) || [];
 
-        dispatch({ type: ActionType.FETCH_SUCCESS, payload: trips });
+        dispatch({ type: ActionType.FETCH_SUCCESS, payload: { trips, count } });
       } else if (error) {
         dispatch({ type: ActionType.FETCH_FAILED, payload: error.message });
       }
@@ -139,7 +158,7 @@ const useFetchTrips = (): UseFetchTripReturnType => {
     }
   };
 
-  return [{ data, loading, error }, fetchTrips];
+  return [{ data, loading, error, count }, fetchTrips];
 };
 
 export default useFetchTrips;
