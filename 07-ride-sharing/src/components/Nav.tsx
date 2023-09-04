@@ -1,21 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "../supabase";
+import { useSelector } from "react-redux";
+import { RootState } from "../app/store";
 
 export default function Nav() {
-  const [user, setUser] = useState<any>(null);
-
-  const fetchUser = async () => {
-    const response = await supabase.auth.getUser();
-    if (response.data) {
-      console.log(response.data);
-      setUser(response.data.user);
-    }
-  };
-
-  useEffect(() => {
-    fetchUser();
-  }, []);
+  const { user } = useSelector((state: RootState) => state.user.value);
 
   return (
     <nav className="py-5 text-sm font-semibold flex items-center justify-between">
