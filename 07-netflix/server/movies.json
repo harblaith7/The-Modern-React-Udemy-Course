@@ -1,0 +1,722 @@
+[
+    {
+      "id": "1",
+      "title": "Breaking Bad",
+      "description": "A high school teacher decides to cook meth to provide for his family before he dies of cancer",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/Svb3PBWmhaQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "2",
+      "title": "Game of Thrones",
+      "description": "An amazing TV show up until the end",
+      "thumbnailUrl": "https://www.comingsoon.net/wp-content/uploads/sites/3/2022/06/emilia-clarke-daenerys-targaryen-game-of-thrones-hbo.jpg",
+      "videoUrl": "https://www.youtube.com/embed/tdwGrD169hE?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "3",
+      "title": "South Park",
+      "description": "Four boys try to make it through school",
+      "thumbnailUrl": "https://variety.com/wp-content/uploads/2019/10/south-park.jpg?w=1000&h=563&crop=1",
+      "videoUrl": "https://www.youtube.com/embed/MW-bASP8mAg?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Comedy"
+    },
+    {
+      "id": "4",
+      "title": "Chernobyl",
+      "description": "Nuclear explosion in Ukraine",
+      "thumbnailUrl": "https://images.thequint.com/thequint%2F2019-06%2F802fb162-5ab9-493a-9bc6-20e808b96f47%2Fchern.jpg?rect=0%2C0%2C952%2C536",
+      "videoUrl": "https://www.youtube.com/embed/Fy-QAIwV-D0?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "5",
+      "title": "Dopesick",
+      "description": "Pharmaceutical company and corruption",
+      "thumbnailUrl": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/F6441C797FBE6A4FCCDB69A403F5850E76F6D762802D86FFAC13E4341C771600/scale?width=1200&aspectRatio=1.78&format=jpeg",
+      "videoUrl": "https://www.youtube.com/embed/t0i2jYG784U?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "6",
+      "title": "The Last Dance",
+      "description": "Documentary on the GOAT",
+      "thumbnailUrl": "https://library.sportingnews.com/2021-08/the-last-dance-netflix-espn-plus-ftr_pihe64f7uvv611v0e47jjby4x.png",
+      "videoUrl": "https://www.youtube.com/embed/NODVmYesb20?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "7",
+      "title": "The Office",
+      "description": "Documentary on people in an office",
+      "thumbnailUrl": "https://flxt.tmsimg.com/assets/p185008_b_h10_ai.jpg",
+      "videoUrl": "https://www.youtube.com/embed/ives5m1cgw?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Comedy"
+    },
+    {
+      "id": "8",
+      "title": "Trailer Park Boys",
+      "description": "Documentary on people in an trailer park",
+      "thumbnailUrl": "https://eu-images.contentstack.com/v3/assets/blt781c383a1983f673/blta7c59c2e61f6ee3d/621c75aa924ed5483e0f6a98/trailerpark.png?width=734&auto=webp&format=png",
+      "videoUrl": "https://www.youtube.com/embed/zuTAknakiPg?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Comedy"
+    },
+    {
+      "id": "9",
+      "title": "Better Call Saul",
+      "description": "Prequel to Breaking Bad",
+      "thumbnailUrl": "https://www.denofgeek.com/wp-content/uploads/2022/04/Better-Call-Saul-Season-6-Episode-3-Rock-and-Hard-Place.jpg?fit=1920%2C1080",
+      "videoUrl": "https://www.youtube.com/embed/gSANa2J_Jhw?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "10",
+      "title": "Fargo",
+      "description": "I forget what this is about",
+      "thumbnailUrl": "https://static01.nyt.com/images/2020/09/25/arts/25Fargo-print/25Fargo-print-videoSixteenByNine3000.jpg?year=2020&h=1688&w=3000&s=159b3e1c5720f87a1df53b098d44c074b4a3b81405a4cead9d1e34209f69bdeb&k=ZQJBKqZ0VN&tw=1",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "11",
+      "title": "Black Mirror",
+      "description": "A bunch of weird episodes",
+      "thumbnailUrl": "https://occ-0-1123-1723.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABUsmwxYNwp0KK2DL2ooVXzexYezjr4WmcihzCIpfX0PApo38rwV2koouiWoyVqSCbCYqVolq6qQV_iLBt_xhPB7C-8qnDmySVpbv0kJ0C87slXAJxnkkn6jc.jpg?r=977",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "12",
+      "title": "The Dark Knight",
+      "description": "Batman and the joker",
+      "thumbnailUrl": "https://images.bauerhosting.com/legacy/media/5f3d/6597/3759/c06f/98a0/7d81/dark-knight-trilogy-main.jpg?ar=16%3A9&fit=crop&crop=top&auto=format&w=1440&q=80",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "7 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "13",
+      "title": "The Godfather Part II",
+      "description": "",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTQ5NTE0MDc0OV5BMl5BanBnXkFtZTgwOTI4NjIwMjE@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "14",
+      "title": "Nathan for You",
+      "description": "Funny awkward guy tries to fix people's problems",
+      "thumbnailUrl": "https://yt3.ggpht.com/wyfo87snJ04qrxIYt513gT9t7uwhcu7CgNfqmmrhiSkEU9IrDHl13kR2pykOM2equFgRI4huJw=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Comedy"
+    },
+    {
+      "id": "15",
+      "title": "Narcos",
+      "description": "Drug cartel in columbia",
+      "thumbnailUrl": "https://www.hollywoodreporter.com/wp-content/uploads/2016/08/narcos_still_1.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "16",
+      "title": "The Last of Us",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://backend.artreview.com/wp-content/uploads/2023/02/lastofus.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "17",
+      "title": " Forrest Gump",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/11/28/10/forrest-gump-running-main.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "18",
+      "title": "Parasite",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://media.newyorker.com/photos/5da4a5c756dcd400082a63ba/master/w_2560%2Cc_limit/Brody-Parasite.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "19",
+      "title": "Oppenheimer",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://media.gq.com/photos/645956c367d4264086a5d77f/16:9/w_2352,h_1323,c_limit/Screen%20Shot%202023-05-08%20at%204.07.48%20PM.png",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "20",
+      "title": "Whiplash",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://media.newyorker.com/photos/59097ccac14b3c606c109711/master/pass/Brody-Whiplash.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "21",
+      "title": "Breaking Bad",
+      "description": "A high school teacher decides to cook meth to provide for his family before he dies of cancer",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "22",
+      "title": "Game of Thrones",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://www.comingsoon.net/wp-content/uploads/sites/3/2022/06/emilia-clarke-daenerys-targaryen-game-of-thrones-hbo.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "23",
+      "title": "South Park",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://variety.com/wp-content/uploads/2019/10/south-park.jpg?w=1000&h=563&crop=1",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "24",
+      "title": "Chernobyl",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://images.thequint.com/thequint%2F2019-06%2F802fb162-5ab9-493a-9bc6-20e808b96f47%2Fchern.jpg?rect=0%2C0%2C952%2C536",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "25",
+      "title": "Dopesick",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/F6441C797FBE6A4FCCDB69A403F5850E76F6D762802D86FFAC13E4341C771600/scale?width=1200&aspectRatio=1.78&format=jpeg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "26",
+      "title": "The Last Dance",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://library.sportingnews.com/2021-08/the-last-dance-netflix-espn-plus-ftr_pihe64f7uvv611v0e47jjby4x.png",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "27",
+      "title": "The Office",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://flxt.tmsimg.com/assets/p185008_b_h10_ai.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "28",
+      "title": "Trailer Park Boys",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://eu-images.contentstack.com/v3/assets/blt781c383a1983f673/blta7c59c2e61f6ee3d/621c75aa924ed5483e0f6a98/trailerpark.png?width=734&auto=webp&format=png",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "29",
+      "title": "Better Call Sauk",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://www.denofgeek.com/wp-content/uploads/2022/04/Better-Call-Saul-Season-6-Episode-3-Rock-and-Hard-Place.jpg?fit=1920%2C1080",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "30",
+      "title": "Fargo",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://static01.nyt.com/images/2020/09/25/arts/25Fargo-print/25Fargo-print-videoSixteenByNine3000.jpg?year=2020&h=1688&w=3000&s=159b3e1c5720f87a1df53b098d44c074b4a3b81405a4cead9d1e34209f69bdeb&k=ZQJBKqZ0VN&tw=1",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "31",
+      "title": "Black Mirror",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://occ-0-1123-1723.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABUsmwxYNwp0KK2DL2ooVXzexYezjr4WmcihzCIpfX0PApo38rwV2koouiWoyVqSCbCYqVolq6qQV_iLBt_xhPB7C-8qnDmySVpbv0kJ0C87slXAJxnkkn6jc.jpg?r=977",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "32",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "33",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "34",
+      "title": "Nathan for You",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://yt3.ggpht.com/wyfo87snJ04qrxIYt513gT9t7uwhcu7CgNfqmmrhiSkEU9IrDHl13kR2pykOM2equFgRI4huJw=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "35",
+      "title": "Narcos",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://www.hollywoodreporter.com/wp-content/uploads/2016/08/narcos_still_1.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "36",
+      "title": "The Last of Us",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://backend.artreview.com/wp-content/uploads/2023/02/lastofus.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "37",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "38",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "39",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "40",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "41",
+      "title": "Breaking Bad",
+      "description": "A high school teacher decides to cook meth to provide for his family before he dies of cancer",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "42",
+      "title": "Game of Thrones",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://www.comingsoon.net/wp-content/uploads/sites/3/2022/06/emilia-clarke-daenerys-targaryen-game-of-thrones-hbo.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "43",
+      "title": "South Park",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://variety.com/wp-content/uploads/2019/10/south-park.jpg?w=1000&h=563&crop=1",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "44",
+      "title": "Chernobyl",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://images.thequint.com/thequint%2F2019-06%2F802fb162-5ab9-493a-9bc6-20e808b96f47%2Fchern.jpg?rect=0%2C0%2C952%2C536",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "45",
+      "title": "Dopesick",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/F6441C797FBE6A4FCCDB69A403F5850E76F6D762802D86FFAC13E4341C771600/scale?width=1200&aspectRatio=1.78&format=jpeg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "46",
+      "title": "The Last Dance",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://library.sportingnews.com/2021-08/the-last-dance-netflix-espn-plus-ftr_pihe64f7uvv611v0e47jjby4x.png",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "47",
+      "title": "The Office",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://flxt.tmsimg.com/assets/p185008_b_h10_ai.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "48",
+      "title": "Trailer Park Boys",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://eu-images.contentstack.com/v3/assets/blt781c383a1983f673/blta7c59c2e61f6ee3d/621c75aa924ed5483e0f6a98/trailerpark.png?width=734&auto=webp&format=png",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "49",
+      "title": "Better Call Sauk",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://www.denofgeek.com/wp-content/uploads/2022/04/Better-Call-Saul-Season-6-Episode-3-Rock-and-Hard-Place.jpg?fit=1920%2C1080",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "50",
+      "title": "Fargo",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://static01.nyt.com/images/2020/09/25/arts/25Fargo-print/25Fargo-print-videoSixteenByNine3000.jpg?year=2020&h=1688&w=3000&s=159b3e1c5720f87a1df53b098d44c074b4a3b81405a4cead9d1e34209f69bdeb&k=ZQJBKqZ0VN&tw=1",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "51",
+      "title": "Black Mirror",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://occ-0-1123-1723.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABUsmwxYNwp0KK2DL2ooVXzexYezjr4WmcihzCIpfX0PApo38rwV2koouiWoyVqSCbCYqVolq6qQV_iLBt_xhPB7C-8qnDmySVpbv0kJ0C87slXAJxnkkn6jc.jpg?r=977",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "52",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "53",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "54",
+      "title": "Nathan for You",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://yt3.ggpht.com/wyfo87snJ04qrxIYt513gT9t7uwhcu7CgNfqmmrhiSkEU9IrDHl13kR2pykOM2equFgRI4huJw=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "55",
+      "title": "Narcos",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://www.hollywoodreporter.com/wp-content/uploads/2016/08/narcos_still_1.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "56",
+      "title": "The Last of Us",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://backend.artreview.com/wp-content/uploads/2023/02/lastofus.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "57",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "58",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "59",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "60",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "61",
+      "title": "Breaking Bad",
+      "description": "A high school teacher decides to cook meth to provide for his family before he dies of cancer",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "62",
+      "title": "Game of Thrones",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://www.comingsoon.net/wp-content/uploads/sites/3/2022/06/emilia-clarke-daenerys-targaryen-game-of-thrones-hbo.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "63",
+      "title": "South Park",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://variety.com/wp-content/uploads/2019/10/south-park.jpg?w=1000&h=563&crop=1",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "64",
+      "title": "Chernobyl",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://images.thequint.com/thequint%2F2019-06%2F802fb162-5ab9-493a-9bc6-20e808b96f47%2Fchern.jpg?rect=0%2C0%2C952%2C536",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "65",
+      "title": "Dopesick",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/F6441C797FBE6A4FCCDB69A403F5850E76F6D762802D86FFAC13E4341C771600/scale?width=1200&aspectRatio=1.78&format=jpeg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "66",
+      "title": "The Last Dance",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://library.sportingnews.com/2021-08/the-last-dance-netflix-espn-plus-ftr_pihe64f7uvv611v0e47jjby4x.png",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "67",
+      "title": "The Office",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://flxt.tmsimg.com/assets/p185008_b_h10_ai.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "68",
+      "title": "Trailer Park Boys",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://eu-images.contentstack.com/v3/assets/blt781c383a1983f673/blta7c59c2e61f6ee3d/621c75aa924ed5483e0f6a98/trailerpark.png?width=734&auto=webp&format=png",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "69",
+      "title": "Better Call Sauk",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://www.denofgeek.com/wp-content/uploads/2022/04/Better-Call-Saul-Season-6-Episode-3-Rock-and-Hard-Place.jpg?fit=1920%2C1080",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "70",
+      "title": "Fargo",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://static01.nyt.com/images/2020/09/25/arts/25Fargo-print/25Fargo-print-videoSixteenByNine3000.jpg?year=2020&h=1688&w=3000&s=159b3e1c5720f87a1df53b098d44c074b4a3b81405a4cead9d1e34209f69bdeb&k=ZQJBKqZ0VN&tw=1",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "71",
+      "title": "Black Mirror",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://occ-0-1123-1723.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABUsmwxYNwp0KK2DL2ooVXzexYezjr4WmcihzCIpfX0PApo38rwV2koouiWoyVqSCbCYqVolq6qQV_iLBt_xhPB7C-8qnDmySVpbv0kJ0C87slXAJxnkkn6jc.jpg?r=977",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "72",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "73",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "74",
+      "title": "Nathan for You",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://yt3.ggpht.com/wyfo87snJ04qrxIYt513gT9t7uwhcu7CgNfqmmrhiSkEU9IrDHl13kR2pykOM2equFgRI4huJw=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "75",
+      "title": "Narcos",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://www.hollywoodreporter.com/wp-content/uploads/2016/08/narcos_still_1.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "76",
+      "title": "The Last of Us",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://backend.artreview.com/wp-content/uploads/2023/02/lastofus.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "77",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "78",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "79",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    },
+    {
+      "id": "80",
+      "title": "Breaking Bad",
+      "description": "The best show of all time",
+      "thumbnailUrl": "https://m.media-amazon.com/images/M/MV5BMTJiMzgwZTktYzZhZC00YzhhLWEzZDUtMGM2NTE4MzQ4NGFmXkEyXkFqcGdeQWpybA@@._V1_.jpg",
+      "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1",
+      "duration": "2 hours",
+      "genre": "Drama"
+    }
+  ]
