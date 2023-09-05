@@ -6,13 +6,14 @@ import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import PlansPage from "./pages/PlansPage";
 import BrowsePage from "./pages/BrowsePage";
+import WatchPage from "./pages/WatchPage";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <div>
-      <BrowsePage />
+      <WatchPage />
     </div>
   );
 }
