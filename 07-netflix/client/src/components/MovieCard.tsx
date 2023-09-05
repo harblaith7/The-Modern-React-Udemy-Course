@@ -6,7 +6,7 @@ const MovieCard = ({ movie }: { movie: Movie }) => {
   const { thumbnailUrl, description, duration, title, genre } = movie;
 
   return (
-    <div className="group bg-zinc-900 col-span relative h-[12vw]">
+    <div className="group bg-zinc-900 col-span relative h-[12vw] w-[24%]">
       <img
         src={thumbnailUrl}
         alt="Movie"
