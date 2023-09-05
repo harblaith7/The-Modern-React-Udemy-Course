@@ -1,19 +1,11 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
+import axios from "axios";
+import { Movie } from "../types";
 
 interface State {
   data: Movie[] | null;
   error: string | null;
   loading: boolean;
-}
-
-interface Movie {
-  id: string;
-  title: string;
-  description: string;
-  thumbnailUrl: string;
-  videoUrl: string;
-  genre: string;
-  duration: string;
 }
 
 const initialState: State = {
@@ -59,7 +51,24 @@ const reducer = (_: State, action: Action): State => {
 };
 
 const useMoviesList = () => {
-  const [{ data, loading, error }] = useReducer(reducer, initialState);
+  const [{ data, loading, error }, dispatch] = useReducer(
+    reducer,
+    initialState
+  );
+
+  useEffect(() => {
+    fetchMoviesList();
+  }, []);
+
+  const fetchMoviesList = async () => {
+    dispatch({ type: ActionType.LOADING });
+    try {
+      const response = await axios.get("http://localhost:8080/movies/list");
+      dispatch({ type: ActionType.SUCCESS, payload: response.data });
+    } catch (error) {
+      dispatch({ type: ActionType.FAILED, payload: "Something went wrong" });
+    }
+  };
 
   return { data, loading, error };
 };
