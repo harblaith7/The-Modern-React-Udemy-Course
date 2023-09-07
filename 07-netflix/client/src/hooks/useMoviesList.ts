@@ -50,7 +50,7 @@ const reducer = (_: State, action: Action): State => {
   }
 };
 
-const useMoviesList = () => {
+const useMoviesList = (offset: number) => {
   const [{ data, loading, error }, dispatch] = useReducer(
     reducer,
     initialState
@@ -63,7 +63,9 @@ const useMoviesList = () => {
   const fetchMoviesList = async () => {
     dispatch({ type: ActionType.LOADING });
     try {
-      const response = await axios.get("http://localhost:8080/movies/list");
+      const response = await axios.get(
+        `http://localhost:8080/movies/list?offset=${offset}`
+      );
       dispatch({ type: ActionType.SUCCESS, payload: response.data });
     } catch (error) {
       dispatch({ type: ActionType.FAILED, payload: "Something went wrong" });
