@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { prisma } = require("../db");
 
 router.get("/movies/list", async (req, res) => {
   const offset = parseInt(req.query.offset);

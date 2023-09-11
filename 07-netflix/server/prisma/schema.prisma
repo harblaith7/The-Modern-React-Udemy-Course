@@ -19,3 +19,10 @@ model Movie {
   duration     String
   genre        String
 }
+
+model User {
+  id       Int    @id @default(autoincrement())
+  username String
+  email    String @unique
+  password String
+}
