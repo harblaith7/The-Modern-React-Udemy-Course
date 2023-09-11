@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const { check, validationResult } = require("express-validator");
 const { prisma } = require("../db");
+const bcrypt = require("bcrypt");
+const JWT = require("jsonwebtoken");
 
 router.post(
   "/signup",
@@ -24,6 +26,8 @@ router.post(
       });
     }
 
+    const { email, password, username } = req.body;
+
     const user = await prisma.user.findUnique({
       where: {
         email,
@@ -35,10 +39,29 @@ router.post(
         errors: [{ msg: "This user already exists" }],
       });
     }
+    const hashedPassword = await bcrypt.hash(password, 10);
 
-    res.send("VALID");
+    const newUser = await prisma.user.create({
+      data: {
+        email,
+        username,
+        password: hashedPassword,
+      },
+      select: {
+        id: true,
+        username: true,
+        email: true,
+      },
+    });
 
-    const { email, password, username } = req.body;
+    const token = await JWT.sign(newUser, process.env.JSON_WEB_TOKEN_SECRET, {
+      expiresIn: 3600000,
+    });
+
+    res.json({
+      user: newUser,
+      token,
+    });
   }
 );
 
