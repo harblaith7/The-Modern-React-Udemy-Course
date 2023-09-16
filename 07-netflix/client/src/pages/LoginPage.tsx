@@ -8,6 +8,7 @@ import {
   FieldErrors,
 } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 export type Inputs = {
   email: string;
@@ -40,6 +41,7 @@ export default function LoginPage() {
   const [variant, setVariant] = useState(Variant.LOGIN_IN);
   const [authError, setAuthError] = useState("");
   const { signup, login } = useAuth();
+  const navigate = useNavigate();
   const onSubmit: SubmitHandler<Inputs> = async ({ password, email, name }) => {
     try {
       if (variant === Variant.SIGN_UP) {
@@ -55,6 +57,7 @@ export default function LoginPage() {
         });
       }
       setAuthError("");
+      navigate("/browse");
     } catch (error: any) {
       setAuthError(error.response.data.errors[0].msg);
     }
