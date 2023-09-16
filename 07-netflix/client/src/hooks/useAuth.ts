@@ -15,7 +15,7 @@ const useAuth = () => {
     return response.data;
   };
 
-  const signup = ({
+  const signup = async ({
     email,
     password,
     username,
