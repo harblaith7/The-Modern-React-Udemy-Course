@@ -1,7 +1,12 @@
 import NavBar from "../components/NavBar";
 import Input from "../components/Input";
 import { createContext, useState } from "react";
-import { useForm, SubmitHandler, UseFormRegister } from "react-hook-form";
+import {
+  useForm,
+  SubmitHandler,
+  UseFormRegister,
+  FieldErrors,
+} from "react-hook-form";
 
 export type Inputs = {
   email: string;
@@ -16,10 +21,12 @@ enum Variant {
 
 interface AuthFormContextType {
   register: UseFormRegister<Inputs> | null;
+  errors: FieldErrors<Inputs>;
 }
 
 export const AuthFormContext = createContext<AuthFormContextType>({
   register: null,
+  errors: {},
 });
 
 export default function LoginPage() {
@@ -44,6 +51,7 @@ export default function LoginPage() {
           <AuthFormContext.Provider
             value={{
               register,
+              errors,
             }}
           >
             <form
