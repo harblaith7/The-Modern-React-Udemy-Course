@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../app/store";
+import useAuth from "../hooks/useAuth";
 
 const tabs = [
   "Home",
@@ -10,6 +13,10 @@ const tabs = [
 ];
 
 export default function NavBar() {
+  const { user, isLoading } = useSelector(
+    (state: RootState) => state.user.value
+  );
+  const { logout } = useAuth();
   const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
@@ -34,7 +41,7 @@ export default function NavBar() {
           src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
           alt="logo"
         />
-        <div className="flex gap-7 ml-8">
+        <div className="flex gap-7 ml-8 mr-auto">
           {tabs.map((tab) => (
             <div
               key={tab}
@@ -44,6 +51,13 @@ export default function NavBar() {
             </div>
           ))}
         </div>
+        {user && !isLoading && (
+          <div>
+            <div className="text-white hover:text-gray-300 cursor-pointer ml-auto">
+              <p onClick={logout}>Logout</p>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
