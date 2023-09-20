@@ -21,7 +21,9 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />}>
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
-      <Route path="/plans" element={<PlansPage />} />
+      <Route path="/plans" element={<PrivateRoutes />}>
+        <Route path="/plans" element={<PlansPage />} />
+      </Route>
       <Route path="/browse" element={<PrivateRoutes />}>
         <Route path="/browse" element={<BrowsePage />} />
         <Route path="/browse/watch/:id" element={<WatchPage />} />
