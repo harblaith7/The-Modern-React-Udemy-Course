@@ -22,4 +22,23 @@ router.get("/products", async (req, res) => {
   return res.json(products);
 });
 
+router.post("/session", async (req, res) => {
+  const { priceId, email } = req.body;
+  const session = await stripe.checkout.sessions.create({
+    mode: "subscription",
+    payment_method_types: ["card"],
+    line_items: [
+      {
+        price: priceId,
+        quantity: 1,
+      },
+    ],
+    success_url: "http://localhost:5173/browse",
+    cancel_url: "http://localhost:5173/plans",
+    customer_email: email,
+  });
+
+  return res.json(session);
+});
+
 module.exports = router;

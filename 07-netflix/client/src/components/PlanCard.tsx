@@ -1,16 +1,31 @@
 import { CheckIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Plan } from "../hooks/usePlans";
 
+interface PlanProps {
+  setSelectedSession: React.Dispatch<React.SetStateAction<string | null>>;
+  selectedSession: string | null;
+  plan: Plan;
+}
+
 const formatter = new Intl.NumberFormat("en-US", {
   style: "currency",
   currency: "CAD",
 });
 
-export default function PlanCard({ plan }: { plan: Plan }) {
+export default function PlanCard({
+  plan,
+  setSelectedSession,
+  selectedSession,
+}: PlanProps) {
   const { name, price, canDownload, canWatchSouthPark } = plan;
 
   return (
-    <div className="border rounded p-3 h-[350px] w-full pointer mr-3">
+    <div
+      className={`border rounded p-3 h-[350px] w-full pointer mr-3 cursor-pointer ${
+        selectedSession === plan.price.id ? "border-3 border-black" : null
+      }`}
+      onClick={() => setSelectedSession(plan.price.id)}
+    >
       <div className="rounded bg-gradient-to-r from-cyan-500 to-blue-500 w-full p-3 text-white font-bold">
         <h3 className="text-2xl">{name}</h3>
         <p className="font-light">{formatter.format(price.amount / 100)}</p>
